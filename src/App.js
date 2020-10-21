@@ -1,14 +1,15 @@
 import "./app.css";
 import Header from "./components/Header";
+import { createElement } from "./utils/elements";
 
 function App() {
-  const container = document.createElement("div");
   const header = Header();
 
-  const main = document.createElement("main");
-  main.innerText = "Hello World";
+  const main = createElement("main", {
+    innerText: "👋",
+  });
 
-  container.append(header, main);
+  const container = createElement("div", { children: [header, main] });
   return container;
 }
 

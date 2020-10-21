@@ -1,14 +1,17 @@
 import "./header.css";
 import logoSrc from "../assets/logo.png";
+import { createElement } from "../utils/elements";
 
 function Header() {
-  const header = document.createElement("header");
-  header.className = "header";
-  const logo = document.createElement("img");
-  logo.src = logoSrc;
-  logo.alt = "Logo";
+  const logo = createElement("img", {
+    src: logoSrc,
+    alt: "Logo",
+  });
 
-  header.append(logo);
+  const header = createElement("header", {
+    className: "header",
+    children: [logo],
+  });
   return header;
 }
 
