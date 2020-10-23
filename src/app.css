@@ -4,11 +4,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-primary: rgb(48, 118, 209);
+}
+
 html {
   font-size: 16px;
 }
 
 body {
   margin: 0;
-  background: darkslategray;
+  background: rgb(18, 27, 27);
+}
+
+.bg-primary {
+  background: var(--bg-primary);
 }

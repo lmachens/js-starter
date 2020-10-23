@@ -6,3 +6,11 @@ export function createElement(tagName, { children, ...rest } = {}) {
   }
   return element;
 }
+
+export function styled(component, className) {
+  return function (props) {
+    const element = component(props);
+    element.classList.add(className);
+    return element;
+  };
+}
