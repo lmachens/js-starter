@@ -7,8 +7,8 @@ const Header = Component("header", {
   className: "header",
 });
 
-function AppBar() {
-  return Header({
+const AppBar = () =>
+  Header({
     children: [
       Logo({
         src: logoSrc,
@@ -16,6 +16,5 @@ function AppBar() {
       }),
     ],
   });
-}
 
 export default AppBar;

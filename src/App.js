@@ -9,8 +9,8 @@ const Main = Component("main", {
 });
 const Container = Component("div");
 
-function App() {
-  return Container({
+const App = () =>
+  Container({
     children: [
       AppBar(),
       Main(),
@@ -18,6 +18,5 @@ function App() {
       PrimaryButton({ innerText: "World" }),
     ],
   });
-}
 
 export default App;
